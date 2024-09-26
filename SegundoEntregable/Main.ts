@@ -29,5 +29,11 @@ registroAutomotor.agregarAuto(auto1);
 registroAutomotor.agregarMoto(moto1);
 registroAutomotor.agregarCamion(camion1);
 console.log(registroAutomotor);
+
+// Dar de Baja un vehiculo del Registro del Automotor
 registroAutomotor.bajaAuto("ETH 197");
 console.log(registroAutomotor);
+
+// Obtener y modificar datos de los diferentes vehiculos 
+console.log(`La patente del auto consultado es: + ${auto3.getPatente()}`);
+
