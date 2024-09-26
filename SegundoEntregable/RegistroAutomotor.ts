@@ -2,7 +2,7 @@ import { Auto } from "./Autos";
 import { Moto } from "./Motos";
 import { Camion } from "./Camiones";
 
-class RegistroAutomotor {
+export class RegistroAutomotor {
     private nombreRegistro: string;
     private localidad: string;
     private autos: Auto[];
@@ -45,6 +45,32 @@ class RegistroAutomotor {
 
     public setLocalidad(localidad: string): void {
         this.localidad = localidad;
+    }
+
+    public agregarAuto(autos: Auto): void {
+        this.autos.push(autos);
+
+    }
+
+    public agregarMoto(motos: Moto): void {
+        this.motos.push(motos);
+
+    }
+
+    public agregarCamion(camiones: Camion): void {
+        this.camiones.push(camiones);
+    }
+
+    public bajaAuto(patente: string): void {
+        this.autos = this.autos.filter(autos => autos.getPatente() !== patente);
+    }
+
+    public bajaMoto(patente: string): void {
+        this.motos = this.motos.filter(motos => motos.getPatente() !== patente);
+    }
+
+    public bajaCamion(patente: string): void {
+        this.camiones = this.camiones.filter(camiones => camiones.getPatente() !== patente);
     }
 
 }

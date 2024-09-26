@@ -1,29 +1,34 @@
 export class Auto {
     private marca: string;
     private modelo: string;
+    private anio: number;
     private patente: string;
     private titular: string;
 
-    constructor(marca: string, modelo: string, patente: string, titular: string) {
+    constructor(marca: string, modelo: string, anio: number, patente: string, titular: string) {
         this.marca = marca;
         this.modelo = modelo;
         this.patente = patente;
         this.titular = titular;
     }
 
-    public getMarca():string {
+    public getMarca(): string {
         return this.marca;
     }
 
-    public getModelo():string {
+    public getModelo(): string {
         return this.modelo;
     }
 
-    public getPatente():string {
+    public getAnio(): number {
+        return this.anio;
+    }
+
+    public getPatente(): string {
         return this.patente;
     }
 
-    public getTitular():string {
+    public getTitular(): string {
         return this.titular;
     }
 
@@ -33,6 +38,10 @@ export class Auto {
 
     public setModelo(modelo: string): void {
         this.modelo = modelo;
+    }
+
+    public setAnio(anio: number): void {
+        this.anio = anio;
     }
 
     public setPatente(patente: string): void {

@@ -1,10 +1,11 @@
 export class Moto {
     private marca: string;
     private modelo: string;
+    private anio: number;
     private patente: string;
     private titular: string;
 
-    constructor(marca: string, modelo: string, patente: string, titular: string) {
+    constructor(marca: string, modelo: string, anio: number, patente: string, titular: string) {
         this.marca = marca;
         this.modelo = modelo;
         this.patente = patente;
@@ -17,6 +18,10 @@ export class Moto {
 
     public getModelo():string {
         return this.modelo;
+    }
+
+    public getAnio(): number {
+        return this.anio;
     }
 
     public getPatente():string {
@@ -33,6 +38,10 @@ export class Moto {
 
     public setModelo(modelo: string): void {
         this.modelo = modelo;
+    }
+
+    public setAnio(anio: number): void {
+        this.anio = anio;
     }
 
     public setPatente(patente: string): void {
