@@ -48,6 +48,7 @@ export class RegistroAutomotor {
     }
 
     public agregarAuto(autos: Auto): void {
+        // Si la patente es distinto de "" y es distinto de undefined agregar auto sino mostrar error
         this.autos.push(autos);
 
     }
