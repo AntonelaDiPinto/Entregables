@@ -33,10 +33,16 @@ export class Auto {
     }
 
     public setMarca(marca: string): void {
-        this.marca = marca;
+        if(marca != "") {
+            this.marca = "No se introdujó el nombre de una marca";
+            } else 
+            this.marca = marca;   
     }
 
     public setModelo(modelo: string): void {
+        if(modelo != "") {
+            this.modelo = "No se introdujó el nombre de un modelo";
+        } else
         this.modelo = modelo;
     }
 
