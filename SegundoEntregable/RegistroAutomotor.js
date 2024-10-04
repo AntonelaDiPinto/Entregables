@@ -37,6 +37,7 @@ var RegistroAutomotor = /** @class */ (function () {
         this.localidad = localidad;
     };
     RegistroAutomotor.prototype.agregarAuto = function (autos) {
+        // Si la patente es distinto de "" y es distinto de undefined agregar auto sino mostrar error
         this.autos.push(autos);
     };
     RegistroAutomotor.prototype.agregarMoto = function (motos) {
@@ -45,14 +46,41 @@ var RegistroAutomotor = /** @class */ (function () {
     RegistroAutomotor.prototype.agregarCamion = function (camiones) {
         this.camiones.push(camiones);
     };
+    RegistroAutomotor.prototype.obtenerAutoPorPatente = function (patente) {
+        return this.autos.find(function (autos) { return autos.getPatente() === patente; });
+    };
+    /*public bajaAuto(patente: string): void {
+        this.autos = this.autos.filter(autos => autos.getPatente() !== patente);
+    }*/
     RegistroAutomotor.prototype.bajaAuto = function (patente) {
-        this.autos = this.autos.filter(function (autos) { return autos.getPatente() !== patente; });
+        var index = this.autos.findIndex(function (autos) { return autos.getPatente() === patente; });
+        if (index !== -1) {
+            this.autos.splice(index, 1);
+            return true;
+        }
+        return false;
     };
+    /*public bajaMoto(patente: string): void {
+        this.motos = this.motos.filter(motos => motos.getPatente() !== patente);
+    }*/
     RegistroAutomotor.prototype.bajaMoto = function (patente) {
-        this.motos = this.motos.filter(function (motos) { return motos.getPatente() !== patente; });
+        var index = this.motos.findIndex(function (motos) { return motos.getPatente() === patente; });
+        if (index !== -1) {
+            this.motos.splice(index, 1);
+            return true;
+        }
+        return false;
     };
+    /*public bajaCamion(patente: string): void {
+        this.camiones = this.camiones.filter(camiones => camiones.getPatente() !== patente);
+    }*/
     RegistroAutomotor.prototype.bajaCamion = function (patente) {
-        this.camiones = this.camiones.filter(function (camiones) { return camiones.getPatente() !== patente; });
+        var index = this.camiones.findIndex(function (camiones) { return camiones.getPatente() === patente; });
+        if (index !== -1) {
+            this.camiones.splice(index, 1);
+            return true;
+        }
+        return false;
     };
     return RegistroAutomotor;
 }());

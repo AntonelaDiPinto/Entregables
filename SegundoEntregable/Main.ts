@@ -43,4 +43,3 @@ console.log(`La patente del auto consultado es: ${camion1.getPatente()}`); // Mo
 console.log(`El titular del vehículo consultado es: ${camion1.getTitular()}`);
 camion1.setTitular("Di Pinto Carlos Alberto");
 console.log(camion1);
-

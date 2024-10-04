@@ -28,12 +28,15 @@ registroAutomotor.agregarMoto(moto1);
 registroAutomotor.agregarMoto(moto3);
 registroAutomotor.agregarCamion(camion1);
 registroAutomotor.agregarCamion(camion4);
-// Dar de Baja un vehiculo del Registro del Automotor
+/*// Dar de Baja un vehiculo del Registro del Automotor
 registroAutomotor.bajaAuto("ETH 197");
 registroAutomotor.bajaCamion("LETR18");
+
 console.log(registroAutomotor);
-// Obtener y modificar datos de los diferentes vehiculos 
-console.log("La patente del auto consultado es: ".concat(camion1.getPatente())); // Modificar la manera de obtener la informacion de un vehiculo
-console.log("El titular del veh\u00EDculo consultado es: ".concat(camion1.getTitular()));
+
+// Obtener y modificar datos de los diferentes vehiculos
+/*console.log(`La patente del auto consultado es: ${camion1.getPatente()}`); // Modificar la manera de obtener la informacion de un vehiculo
+console.log(`El titular del vehículo consultado es: ${camion1.getTitular()}`);
 camion1.setTitular("Di Pinto Carlos Alberto");
-console.log(camion1);
+console.log(camion1);*/
+console.log(registroAutomotor.obtenerAutoPorPatente("PMG 745"));
