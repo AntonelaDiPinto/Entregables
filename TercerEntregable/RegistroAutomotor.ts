@@ -1,6 +1,6 @@
 import { Vehiculo } from "./Vehiculo";
 
-class RegistroAutomotor {
+export class RegistroAutomotor {
     private vehiculos: Vehiculo[];
     private nombre: string;
     private localidad: string;
