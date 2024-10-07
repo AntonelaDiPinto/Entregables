@@ -1,9 +1,14 @@
 "use strict";
-var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
+var Auto_1 = require("./Auto");
 var Moto_1 = require("./Moto");
 var Camion_1 = require("./Camion");
 var RegistroAutomotor_1 = require("./RegistroAutomotor");
+// Crear Auto
+var auto1 = new Auto_1.Auto("Renault", "Clio", 2005, "ETH 197", "Villeres Juan José", 5, "Gris Perla");
+var auto2 = new Auto_1.Auto("Peugeot", "206", 1996, "APC 256", "Benitéz Rosana", 3, "Negro");
+var auto3 = new Auto_1.Auto("Chevrolet", "Corsa", 2016, "PMG 745", "Alvarez Julian", 5, "Rojo");
+var auto4 = new Auto_1.Auto("Fiat", "Cronos", 2018, "AA-132-AA", "Marino Carla", 5, "Blanco");
 // Crear Moto
 var moto1 = new Moto_1.Moto("Ducati", "Streetfighter V2", 2022, "A050EKP", "Fernandéz Maria Clara", 110);
 var moto2 = new Moto_1.Moto("Suzuki", "Intruder 800", 1995, "364DRY", "Ciancio Alfredo", 150);
@@ -17,6 +22,10 @@ var camion4 = new Camion_1.Camion("Ford", "Cargo 1517", 2006, "LETR18", "Gomez R
 // Crear Registro del Automotor
 var registroAutomotor = new RegistroAutomotor_1.RegistroAutomotor([], "Seccional Olavarría N° 3", "Olavarría");
 // Agregar Vehículos al Registro Automotor
+registroAutomotor.agregarVehiculo(auto1);
+registroAutomotor.agregarVehiculo(auto2);
+registroAutomotor.agregarVehiculo(auto3);
+registroAutomotor.agregarVehiculo(auto4);
 registroAutomotor.agregarVehiculo(moto1);
 registroAutomotor.agregarVehiculo(moto2);
 registroAutomotor.agregarVehiculo(moto3);
@@ -25,14 +34,16 @@ registroAutomotor.agregarVehiculo(camion1);
 registroAutomotor.agregarVehiculo(camion2);
 registroAutomotor.agregarVehiculo(camion3);
 registroAutomotor.agregarVehiculo(camion4);
-console.log(registroAutomotor);
-// Dar de baja un Vehículo del Registro Automotor
-registroAutomotor.darDeBajaVehiculo("PGDS96");
 //console.log(registroAutomotor);
+// Dar de baja un Vehículo del Registro Automotor
+registroAutomotor.darDeBajaVehiculo("APC 256");
+registroAutomotor.darDeBajaVehiculo("A063PFS");
+registroAutomotor.darDeBajaVehiculo("PGDS96");
+console.log(registroAutomotor);
 // Modificar datos de un Vehículo
-console.log("\nModificando el vehículo con patente '364DRY':");
-registroAutomotor.modificarVehiculo("364DRY", "Alvarez Juan Manuel");
-console.log((_a = registroAutomotor.obtenerVehiculoPorPatente("364DRY")) === null || _a === void 0 ? void 0 : _a.obtenerInfo());
+/*console.log("\nModificando el vehículo con patente '364DRY':");
+registroAutomotor.modificarVehiculo( "364DRY", "Alvarez Juan Manuel");
+console.log(registroAutomotor.obtenerVehiculoPorPatente("364DRY")?.obtenerInfo());*/
 // Obtener los datos de los vehículos incluidos en el Registro Automotor
 //console.log("Datos de uno de los vehículos de nuestro Registro Automotor:");
 //console.log(registroAutomotor.obtenerTodosLosVehiculos());

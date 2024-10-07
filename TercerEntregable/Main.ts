@@ -1,7 +1,14 @@
 import { Vehiculo } from "./Vehiculo";
+import { Auto } from "./Auto";
 import { Moto } from "./Moto";
 import { Camion } from "./Camion";
 import { RegistroAutomotor } from "./RegistroAutomotor";
+
+// Crear Auto
+const auto1 = new Auto ("Renault", "Clio", 2005, "ETH 197", "Villeres Juan José", 5, "Gris Perla");
+const auto2 = new Auto ("Peugeot", "206", 1996, "APC 256", "Benitéz Rosana", 3, "Negro");
+const auto3 = new Auto ("Chevrolet", "Corsa", 2016, "PMG 745", "Alvarez Julian", 5, "Rojo");
+const auto4 = new Auto ("Fiat", "Cronos", 2018, "AA-132-AA", "Marino Carla", 5, "Blanco");
 
 // Crear Moto
 const moto1 = new Moto ("Ducati", "Streetfighter V2", 2022, "A050EKP", "Fernandéz Maria Clara", 110);
@@ -19,6 +26,10 @@ const camion4 = new Camion ("Ford", "Cargo 1517", 2006, "LETR18", "Gomez Roman D
 const registroAutomotor = new RegistroAutomotor ([], "Seccional Olavarría N° 3", "Olavarría");
 
 // Agregar Vehículos al Registro Automotor
+registroAutomotor.agregarVehiculo(auto1);
+registroAutomotor.agregarVehiculo(auto2);
+registroAutomotor.agregarVehiculo(auto3);
+registroAutomotor.agregarVehiculo(auto4);
 registroAutomotor.agregarVehiculo(moto1);
 registroAutomotor.agregarVehiculo(moto2);
 registroAutomotor.agregarVehiculo(moto3);
@@ -31,8 +42,11 @@ registroAutomotor.agregarVehiculo(camion4);
 console.log(registroAutomotor);
 
 // Dar de baja un Vehículo del Registro Automotor
+registroAutomotor.darDeBajaVehiculo("APC 256");
+registroAutomotor.darDeBajaVehiculo("A063PFS");
 registroAutomotor.darDeBajaVehiculo("PGDS96");
-//console.log(registroAutomotor);
+
+console.log(registroAutomotor);
 
 // Modificar datos de un Vehículo
 console.log("\nModificando el vehículo con patente '364DRY':");
@@ -40,6 +54,6 @@ registroAutomotor.modificarVehiculo( "364DRY", "Alvarez Juan Manuel");
 console.log(registroAutomotor.obtenerVehiculoPorPatente("364DRY")?.obtenerInfo());
 
 // Obtener los datos de los vehículos incluidos en el Registro Automotor
-//console.log("Datos de uno de los vehículos de nuestro Registro Automotor:");
-//console.log(registroAutomotor.obtenerTodosLosVehiculos());
+console.log("Datos de uno de los vehículos de nuestro Registro Automotor:");
+console.log(registroAutomotor.obtenerTodosLosVehiculos());
 
