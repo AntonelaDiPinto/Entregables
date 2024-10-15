@@ -5,7 +5,7 @@ export class Arquero extends Personaje {
     private equipamiento: string;
 
     constructor(nombre: string, nivel: number, puntosDeVida: number, cantidadFlechas: number, equipamiento: string) {
-        super();
+        super(nombre, nivel, puntosDeVida);
         this.cantidadFlechas = cantidadFlechas;
         this.equipamiento = equipamiento;
     }

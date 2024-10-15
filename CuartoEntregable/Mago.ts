@@ -4,7 +4,7 @@ export class Mago extends Personaje {
     private trucosDeMagia: string;
 
     constructor(nombre: string, nivel: number, puntosDeVida: number, trucosDeMagia: string) {
-        super();
+        super(nombre, nivel, puntosDeVida);
         this.trucosDeMagia = trucosDeMagia;
     }
 

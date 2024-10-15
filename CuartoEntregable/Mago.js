@@ -20,7 +20,7 @@ var Personaje_1 = require("./Personaje");
 var Mago = /** @class */ (function (_super) {
     __extends(Mago, _super);
     function Mago(nombre, nivel, puntosDeVida, trucosDeMagia) {
-        var _this = _super.call(this) || this;
+        var _this = _super.call(this, nombre, nivel, puntosDeVida) || this;
         _this.trucosDeMagia = trucosDeMagia;
         return _this;
     }

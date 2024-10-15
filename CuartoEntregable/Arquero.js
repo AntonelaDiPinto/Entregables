@@ -20,7 +20,7 @@ var Personaje_1 = require("./Personaje");
 var Arquero = /** @class */ (function (_super) {
     __extends(Arquero, _super);
     function Arquero(nombre, nivel, puntosDeVida, cantidadFlechas, equipamiento) {
-        var _this = _super.call(this) || this;
+        var _this = _super.call(this, nombre, nivel, puntosDeVida) || this;
         _this.cantidadFlechas = cantidadFlechas;
         _this.equipamiento = equipamiento;
         return _this;

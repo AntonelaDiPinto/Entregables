@@ -20,7 +20,7 @@ var Personaje_1 = require("./Personaje");
 var Luchador = /** @class */ (function (_super) {
     __extends(Luchador, _super);
     function Luchador(nombre, nivel, puntosDeVida, armaDisponible) {
-        var _this = _super.call(this) || this;
+        var _this = _super.call(this, nombre, nivel, puntosDeVida) || this;
         _this.armaDisponible = armaDisponible;
         return _this;
     }

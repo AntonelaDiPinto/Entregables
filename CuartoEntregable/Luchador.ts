@@ -4,7 +4,7 @@ export class Luchador extends Personaje {
     private armaDisponible: string;
 
     constructor(nombre: string, nivel: number, puntosDeVida: number, armaDisponible: string) {
-        super();
+        super(nombre, nivel, puntosDeVida);
         this.armaDisponible = armaDisponible;
     }
 
