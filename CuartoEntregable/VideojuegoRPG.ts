@@ -18,20 +18,17 @@ let LuchadorGuerrero = new Luchador("La Bestia", 10, 100, "Armas Largas", 100);
 //CREAR ARQUERO
 let ArqueroAloy = new Arquero("La Ungida", 7, 120, 50, "Arco, lanza, tirachinas, lanzacuerdas, lanzallamas", 75);
 
-/*console.log(MagoIlusionista);
+console.log(MagoIlusionista);
 MagoIlusionista.atacar(MagoIlusionista);
-console.log(`Tras el ataque ${MagoIlusionista.getNombre()} obtuvó 5 puntos de vida por lo cual ahora tiene un total de:`, MagoIlusionista.getPuntosDeVida(), "puntos de vida.");
 MagoIlusionista.hechizar(MagoIlusionista);
-console.log(MagoIlusionista.getMana());*/
+console.log(MagoIlusionista.getMana());
 
 console.log(LuchadorGuerrero);
 LuchadorGuerrero.atacar(LuchadorGuerrero);
 LuchadorGuerrero.evolucionar(LuchadorGuerrero);
 
-
-/*console.log(ArqueroAloy);
+console.log(ArqueroAloy);
 ArqueroAloy.atacar(ArqueroAloy);
 ArqueroAloy.lanzarFlechas(ArqueroAloy);
-console.log(ArqueroAloy);*/
 
 
