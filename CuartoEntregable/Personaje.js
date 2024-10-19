@@ -7,11 +7,25 @@ var Personaje = /** @class */ (function () {
         this.nivel = nivel;
         this.puntosDeVida = puntosDeVida;
     }
-    Personaje.prototype.atacar = function () {
-        console.log("El personaje está ATACANDO");
+    Personaje.prototype.getNombre = function () {
+        return this.nombre;
     };
-    Personaje.prototype.defender = function () {
-        console.log("El personaje se está DEFENDIENDO");
+    Personaje.prototype.getNivel = function () {
+        return this.nivel;
+    };
+    Personaje.prototype.getPuntosDeVida = function () {
+        return this.puntosDeVida;
+    };
+    Personaje.prototype.setNivel = function (nivel) {
+        this.nivel = nivel;
+    };
+    Personaje.prototype.setPuntosDeVida = function (puntosDeVida) {
+        if (puntosDeVida < 0) {
+            this.puntosDeVida = 0;
+        }
+        else {
+            this.puntosDeVida = puntosDeVida;
+        }
     };
     return Personaje;
 }());
