@@ -4,7 +4,7 @@ exports.Personaje = void 0;
 var Personaje = /** @class */ (function () {
     function Personaje(nombre, nivel, puntosDeVida) {
         this.nombre = nombre;
-        this.nivel = nivel;
+        this.nivel = 1;
         this.puntosDeVida = puntosDeVida;
     }
     Personaje.prototype.getNombre = function () {

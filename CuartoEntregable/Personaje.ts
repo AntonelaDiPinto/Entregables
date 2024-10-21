@@ -7,7 +7,7 @@ export abstract class Personaje {
 
     constructor(nombre: string, nivel: number, puntosDeVida: number){
         this.nombre = nombre;
-        this.nivel = nivel;
+        this.nivel = 1;
         this.puntosDeVida = puntosDeVida;
     }
 
@@ -38,4 +38,7 @@ export abstract class Personaje {
     abstract atacar(personaje: Personaje): void;
 
     abstract defender(personaje: Personaje): void;
+
+    abstract obtenerInformacion(): string;
+   
 }
