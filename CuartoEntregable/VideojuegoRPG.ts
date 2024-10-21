@@ -8,17 +8,17 @@ import { Arquero, ArqueroEvolucionado } from "./Arquero";
 import { Personaje } from "./Personaje";
 
 //CREAR MAGOS
-let MagoIlusionista = new Mago("El Ilusionista", 5, 50, "Se trata de un mago capaz de crear ilusiones, e incluso de clonarse. Puede engañar, distraer y confundir a sus enemigos", 10);
-let MagoElementalist = new Mago("Elementalist", 8, 100 , "Está especializado en el dominio de uno o más elementos naturales o supranaturales, capaz de controlarlos e invocar criaturas elementales.", 10);
-let MagoSanador = new MagoEvolucionado("El Curandero", 10, 200, "Se trata de un mago capaz de sanar heridas de leves a graves", 20, 15);
+let MagoIlusionista: Mago = new Mago("El Ilusionista", 5, 50, "Se trata de un mago capaz de crear ilusiones, e incluso de clonarse. Puede engañar, distraer y confundir a sus enemigos", 10);
+let MagoElementalist: Mago = new Mago("Elementalist", 8, 100 , "Está especializado en el dominio de uno o más elementos naturales o supranaturales, capaz de controlarlos e invocar criaturas elementales.", 10);
+let MagoSanador: MagoEvolucionado = new MagoEvolucionado("El Curandero", 10, 200, "Se trata de un mago capaz de sanar heridas de leves a graves", 20, 15);
 //CREAR LUCHADORES 
-let LuchadorCaballero = new Luchador("El Caballero", 6, 60, "Armadura", 85);
-let LuchadorGuerrero = new Luchador("La Bestia", 8, 80, "Armas Largas", 90);
-let LuchadorLegendario = new LuchadorEvolucionado("El Legendario", 10, 100, "Espada de Diamante ⚔️", 500, "Escudo de Hierro 🛡️");
+let LuchadorCaballero: Luchador = new Luchador("El Caballero", 6, 60, "Armadura", 85);
+let LuchadorGuerrero: Luchador = new Luchador("La Bestia", 8, 80, "Armas Largas", 90);
+let LuchadorLegendario: LuchadorEvolucionado = new LuchadorEvolucionado("El Legendario", 10, 100, "Espada de Diamante ⚔️", 500, "Escudo de Hierro 🛡️");
 
 //CREAR ARQUERO
-let ArqueroAloy = new Arquero("La Ungida", 7, 120, 50, "Arco, lanza, tirachinas, lanzacuerdas, lanzallamas", 75);
-let ArqueroCazador = new ArqueroEvolucionado("El Cazador", 10, 100, 80, "Boomerang 🪃", 90, 100);
+let ArqueroAloy: Arquero = new Arquero("La Ungida", 7, 120, 50, "Arco, lanza, tirachinas, lanzacuerdas, lanzallamas", 75);
+let ArqueroCazador: ArqueroEvolucionado = new ArqueroEvolucionado("El Cazador", 10, 100, 80, "Boomerang 🪃", 90, 100);
 
 /*console.log(MagoIlusionista.obtenerInformacion());
 MagoIlusionista.atacar(MagoIlusionista);
