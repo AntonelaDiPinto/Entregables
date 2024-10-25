@@ -3,10 +3,11 @@ import { Personaje } from "./Personaje";
 export class Mago extends Personaje {
     protected trucosDeMagia: string;
     protected mana: number;
+
     protected cajaMagica: string[];
    
 
-    constructor(nombre: string, nivel: number, puntosDeVida: number, trucosDeMagia: string, mana: number, cajaMagica?: []) {
+    constructor(nombre: string, nivel: number, puntosDeVida: number, trucosDeMagia: string, mana: number) {
         super(nombre, nivel, puntosDeVida);
         this.trucosDeMagia = trucosDeMagia;
         this.mana = mana;
@@ -68,7 +69,7 @@ export class MagoEvolucionado extends Mago {
     private pociones: number;
 
     constructor(nombre: string, nivel: number, puntosDeVida: number, trucosDeMagia: string, mana: number, pociones: number, cajaMagica?: string[]) {
-        super(nombre, nivel, puntosDeVida, trucosDeMagia, mana, []);
+        super(nombre, nivel, puntosDeVida, trucosDeMagia, mana);
         this.pociones = pociones;
     }
 

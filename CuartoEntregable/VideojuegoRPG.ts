@@ -20,10 +20,10 @@ let LuchadorLegendario: LuchadorEvolucionado = new LuchadorEvolucionado("El Lege
 let ArqueroAloy: Arquero = new Arquero("La Ungida", 7, 120, 50, "Arco, lanza, tirachinas, lanzacuerdas, lanzallamas", 75);
 let ArqueroCazador: ArqueroEvolucionado = new ArqueroEvolucionado("El Cazador", 10, 100, 80, "Boomerang 🪃", 90, 100);
 
-/*console.log(MagoIlusionista.obtenerInformacion());
+console.log(MagoIlusionista.obtenerInformacion());
 MagoIlusionista.atacar(MagoIlusionista);
 MagoIlusionista.hechizar(MagoIlusionista);
-MagoElementalist.encontrarCajaMagica("Hipnotizar al rival 🌀🌀.");*/
+MagoElementalist.encontrarCajaMagica("Hipnotizar al rival 🌀🌀.");
 
 MagoSanador.curar(LuchadorCaballero);
 console.log(MagoSanador.obtenerInformacion());

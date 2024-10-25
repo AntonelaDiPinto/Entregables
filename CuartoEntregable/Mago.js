@@ -19,7 +19,7 @@ exports.MagoEvolucionado = exports.Mago = void 0;
 var Personaje_1 = require("./Personaje");
 var Mago = /** @class */ (function (_super) {
     __extends(Mago, _super);
-    function Mago(nombre, nivel, puntosDeVida, trucosDeMagia, mana, cajaMagica) {
+    function Mago(nombre, nivel, puntosDeVida, trucosDeMagia, mana) {
         var _this = _super.call(this, nombre, nivel, puntosDeVida) || this;
         _this.trucosDeMagia = trucosDeMagia;
         _this.mana = mana;
@@ -75,7 +75,7 @@ exports.Mago = Mago;
 var MagoEvolucionado = /** @class */ (function (_super) {
     __extends(MagoEvolucionado, _super);
     function MagoEvolucionado(nombre, nivel, puntosDeVida, trucosDeMagia, mana, pociones, cajaMagica) {
-        var _this = _super.call(this, nombre, nivel, puntosDeVida, trucosDeMagia, mana, []) || this;
+        var _this = _super.call(this, nombre, nivel, puntosDeVida, trucosDeMagia, mana) || this;
         _this.pociones = pociones;
         return _this;
     }
